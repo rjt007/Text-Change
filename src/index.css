@@ -1,13 +1,97 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  background-color:rgb(122, 121, 121);
+}
+.header{
+  background-color: white;
+  color:rgb(122, 121, 121);
+  width: 100vw;
+  height: 8vh;
+  text-align: center;
+  text-transform: capitalize;
+  padding-top: 1vh;
+  animation:top 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.maindiv{
+  width:30vw;
+  height:50vh;
+  background-color:white;
+  position: relative;
+  top:25vh;
+  left:36vw;
+  border-radius: 20px;
+  box-shadow:5px 5px 2px rgb(26, 25, 25);
+}
+.maindiv:hover{
+  transform: scale(1.05, 1.05);
+  transition:cubic-bezier(0.77, 0, 0.175, 1);
+}
+.numdiv{
+background-color:blue;
+height: 9vh;
+position: relative;
+top:15vh;
+text-align: center;
+padding-top: 2vh;
+}
+.buttondiv{
+  background-color: blue;
+  height:10vh;
+  position: relative;
+  top:25vh;
+}
+.buttoninc{
+  display: inline-block;
+  position: relative;
+  left:3vw;
+  top:3vh;
+}
+.buttondec{
+  display: inline-block;
+  position: relative;
+  left:15vw;
+  top:3vh;
+}
+button{
+  width: 6vw;
+  height: 5vh;
+  border-radius:10px;
+  border-color: black;
+  font-weight: bolder;
+  font-size:medium;
+  background-color:white;
+}
+button:hover{
+  cursor: pointer;
+  background-color:darkgrey;
+}
+@media screen and (max-width:600px) {
+  .header{
+    font-size:medium;
+  }
+  button{
+    font-size:4.5px;
+  }
+}
+@media screen and (min-width:600px) and (max-width:1100px) {
+  .header{
+    font-size:medium;
+  }
+  button{
+    font-size:xx-small;
+  }
+}
+@keyframes top{
+  0%{
+    width: 50vw;
+  }
+  100%{
+    width: 100vw;
+  }
 }
